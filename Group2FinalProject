@@ -65,8 +65,16 @@ public:
 				c. Push her into the road and run off.
 
 				You have no money and your rent is due in 3 day. What do you do?
-				A. Become homeless
-				B.
+				A. Become homeless.
+				B. Become a stripper for 2 nights.
+				C. Rob a homeless person.
+
+				Someone cuts in front of you in line. What do you do?
+				A. Just shrug it off.
+				B. Step in front of them.
+				C. Attack them aggressivly with your teeth.
+
+
 			  */
 
 			//John Pathway
@@ -125,7 +133,7 @@ public:
 			}
 
 			//Question 3
-			cout << "You see an old lady struggling to cross the street.What do you do? " << "\nA.Help her cross the street." << "\nB.Watch her struggle." << "\nC.Push her into the road and run off." << endl;
+			cout << "You have no money and your rent is due in 3 day. What do you do? " << "\nA.Become Homeless." << "\nB.Become a stripper for 2 nights." << "\nC.Push her into the road and run off." << endl;
 			cin >> choiceQ;
 			//Question 3 John Switch Case
 			switch (choiceQ) {
@@ -150,10 +158,64 @@ public:
 
 			}
 
+			//Question 4
+			cout << "You see an old lady struggling to cross the street.What do you do? " << "\nA.Become Homeless" << "\nB.Be a stripper for 2 nights" << "\nC.Rob a homeless person." << endl;
+			cin >> choiceQ;
+
+			//Question 4 John Switch Case
+			switch (choiceQ) {
+
+			case'a':
+			case 'A':
+				cout << "You have chosen the good answer. " << "You're a little too good" << endl;
+				points = points + 0;
+				break;
+
+			case'b':
+			case 'B':
+				cout << "You have choosen the okay answer. " << "Make it rain!!!!" << endl;
+				points = points - 10;
+				break;
+
+			case'c':
+			case 'C':
+				cout << "You are truly evil. " << " I hope it was worth it" << endl;
+				points = points - 20;
+				break;
+
+			}
+
+			//Question 5
+			cout << "Someone cuts in front of you in line. What do you do?" << "\nA. Just shrug it off" << "\nB. Step in front of them." << "\nC. Attack them aggressivly with your teeth." << endl;
+			
+			//Question 5 John Switch Case
+			switch (choiceQ) {
+
+			case'a':
+			case 'A':
+				cout << "You have chosen the good answer. " << "You could have done something." << endl;
+				points = points + 0;
+				break;
+
+			case'b':
+			case 'B':
+				cout << "You have choosen the okay answer. " << "That was your spot in the first place." << endl;
+				points = points - 10;
+				break;
+
+			case'c':
+			case 'C':
+				cout << "You are truly evil. " << " Cannabalism...." << endl;
+				points = points - 20;
+				break;
+
+			}
+
 			break;
 
 		case 2:
 			//Susan Pathway
+			//Marco Offered to do
 			cout << "You are chosen to be " << name[1] << endl;
 			/*Suggest Scenarios*/
 
