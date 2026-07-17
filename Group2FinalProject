@@ -1,0 +1,96 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class pathway {
+
+
+
+private: 
+	string name[3] = { "John", "Susan", "Gary"};
+	int points; //Variable to calculate points of question answered
+
+
+	//Variable to choose what action to take
+	int choice = 0;
+
+	//Variable to choose question answer
+	char choiceQ;
+
+
+public: 
+
+	pathway() {
+
+	}
+
+	void pathwayChoice() {
+
+		/*Starting each character with 100 points, points are deducted depending on the choice that the user chooses.
+		The correct choice deducts no points, a semi-correct answer deducts 10 points, a wrong answer deducts 20 points
+		70-100 points Heaven's Gate
+		0-69 points you're in Hell*/
+		//Max 5 questions
+
+		//Main Menu
+		cout << "Heaven's Gate" << endl; //Title
+		cout << "Will you choose a life of Good or Evil?" << endl; //Side Words
+
+		cout << "Choose a Character" << endl;
+		cout << "Character 1 (Enter 1): " << name[0] << "\nCharacter 2 (Enter 2): " << name[1] << "\nCharacter 3 (Enter 3): " << name[2] << endl;
+
+
+		cin >> choice;
+
+		switch (choice) {
+		case 1:
+			//John Pathway
+			cout << "You are chosen to be " << name[0] << endl;
+
+			cout << "Your teacher gave you an F. What do you do?" << "\na.Fail the class." << "\nb.Give the teacher a bad review." << "\nc.Frame the teacher for murder." << endl;
+
+			if (choiceQ == a) {
+
+
+			}
+			/*Suggested Scenarios:
+			
+				Your teacher gave you an F. What do you do?
+				a. Fail the class.
+				b. Give the teacher a bad review.
+				c. Frame the teacher for murder.
+
+				Your girlfirend just broke up with you. What do you do?
+				a. Cry alone in your room.
+				b. Stalk her for the next month.
+				c. Burn down her house.
+
+				You see an old lady struggling to cross the street. What do you do?
+				a. Help her cross the street.
+				b. Watch her struggle.
+				c. Push her into the road and run off.
+
+
+			  
+			  */
+
+		case 2:
+			//Susan Pathway
+			cout << "You are chosen to be " << name[1] << endl;
+			/*Suggest Scenarios*/
+
+		case 3:
+			//Gary Pathway
+			cout << "You are chosen to be " << name[2] << endl;
+			/*Suggested Scenarios:  */
+
+		case 4:
+			//Invalid Input or Game Over
+		}
+	}
+
+};
+
+int main() {
+
+}
