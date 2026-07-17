@@ -2,13 +2,31 @@
 #include <string>
 using namespace std;
 
-class pathway {
+class mainMenu {
+
+protected:
+
+	string gameName; //Heaven's Gate
+	string gamealibs; //"Will you choose a life of Good or Evil?"
+
+public:
+
+	mainMenu(const string &gN, const string &gA) : gameName(gN), gamealibs(gA) {}
+
+	void display() {
+		cout << "Game Title: " << gameName << "\n" << gamealibs << endl;
+	}
+
+};
+
+
+class pathway: public mainMenu {
 
 
 
 private: 
 	string name[3] = { "John", "Susan", "Gary"};
-	int points = 100; //Variable to calculate points of question answered
+	int points; //Variable to calculate points of question answered - Make 100
 
 
 	//Variable to choose what action to take
@@ -20,9 +38,7 @@ private:
 
 public: 
 
-	pathway() {
-
-	}
+	pathway(const string& gN, const string& gA,int p) : mainMenu (gN, gA), points(p){}
 
 	void pathwayChoice() {
 
@@ -32,9 +48,7 @@ public:
 		0-69 points you're in Hell*/
 		//Max 5 questions
 
-		//Main Menu
-		cout << "Heaven's Gate" << endl; //Title
-		cout << "Will you choose a life of Good or Evil?" << endl; //Side Words
+		
 
 		cout << "Choose a Character" << endl;
 		cout << "Character 1 (Enter 1): " << name[0] << "\nCharacter 2 (Enter 2): " << name[1] << "\nCharacter 3 (Enter 3): " << name[2] << endl;
@@ -220,9 +234,35 @@ public:
 			/*Suggest Scenarios*/
 
 		case 3:
+			
 			//Gary Pathway
-			cout << "You are chosen to be " << name[2] << endl;
-			/*Suggested Scenarios:  */
+			/*Suggested Scenarios: 
+			
+			You see a kid building a sand castle on the beach. What do you do?
+			A. Give the kid a compliment on the sand castle.
+			B. Tell the kid the sand castle is ugly and to get better.
+			C. Kick the sand castle down and stomp on it.
+			
+			Mcdonalds messed up your order. What do you do?
+			A. Just eat what they gave you.
+			B. Make a scene and storm out the resturant.
+			C. Put ice in the Mcdonalds fryer.
+			
+			You see someone getting robbed. What do you do?
+			A. Stop the robber.
+			B. Record the situation on your phone.
+			C. Rob them too.
+
+			You just got a flat tire. What do you do?
+			A. Put the spare tire on take the care to the shop.
+			B. Stand in the middle of the road.
+			C. Steal a new car.
+
+
+
+			*/
+			cout << "You are chosen to be " << name[2] << endl; //Gary
+			
 
 		case 4:
 			//Invalid Input or Game Over
@@ -233,15 +273,35 @@ public:
 	//Method to calculate whether the user is going to heaven or hell
 	void calculatingPoint() {
 
+		/*70-100 points Heaven's Gate
+		0-69 points you're in Hell*/
+
+		if (points >= 70) {
+			cout << "Congratulations you have made it to Heaven" << endl;
+		}
+		else {
+			cout << "You're Evil. You're going to HELL." << endl;
+		}
+
 	}
 
-	//Displaying Details
+	//Displaying Details (Might not need)
 	void display() {
+
+	}
+
+	~pathway() {
 
 	}
 
 };
 
 int main() {
+
+	pathway p;
+
+	p.pathwayChoice();
+	p.calculatingPoint();
+
 
 }
