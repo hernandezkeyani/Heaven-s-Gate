@@ -8,7 +8,7 @@ class pathway {
 
 private: 
 	string name[3] = { "John", "Susan", "Gary"};
-	int points; //Variable to calculate points of question answered
+	int points = 100; //Variable to calculate points of question answered
 
 
 	//Variable to choose what action to take
@@ -42,19 +42,13 @@ public:
 
 		cin >> choice;
 
+
+
 		switch (choice) {
 		case 1:
-			//John Pathway
-			cout << "You are chosen to be " << name[0] << endl;
 
-			cout << "Your teacher gave you an F. What do you do?" << "\na.Fail the class." << "\nb.Give the teacher a bad review." << "\nc.Frame the teacher for murder." << endl;
-
-			if (choiceQ == a) {
-
-
-			}
 			/*Suggested Scenarios:
-			
+
 				Your teacher gave you an F. What do you do?
 				a. Fail the class.
 				b. Give the teacher a bad review.
@@ -70,9 +64,93 @@ public:
 				b. Watch her struggle.
 				c. Push her into the road and run off.
 
-
-			  
+				You have no money and your rent is due in 3 day. What do you do?
+				A. Become homeless
+				B.
 			  */
+
+			//John Pathway
+			cout << "You are chosen to be " << name[0] << endl;
+
+			//Question 1
+			cout << "Your teacher gave you an F. What do you do?" << "\nA.Fail the class." << "\nB.Give the teacher a bad review." << "\nC.Frame the teacher for murder." << endl;
+			cin >> choiceQ;
+
+			//Switch Case John Question 1
+			switch (choiceQ) {
+			case 'a':
+			case 'A':
+				cout << "You have chosen the good answer. " << "Keep going you might make it to Heaven." << endl;
+				points = points + 0;
+				break;
+
+			case 'b':
+			case 'B':
+				cout << "You have choosen the okay answer. " << "Who knows where you're going to end up." << endl;
+				points = points - 10;
+				break;
+
+			case 'c':
+			case 'C':
+				cout << "You are truly evil. " << "I will be surprised if you don't end up in hell." << endl;
+				points = points - 20; 
+				break;
+			}
+			
+			//Question 2
+			cout << "Your girlfirend just broke up with you.What do you do? " << "\nA.Cry alone in your room." << "\nB.Stalk her for the next month." << "\nC.Burn down her house." << endl;
+			cin >> choiceQ;
+
+			//Question 2 John Switch Case
+			switch (choiceQ) {
+			
+			case'a':
+			case 'A':
+				cout << "You have chosen the good answer. " << "You make God blush" << endl;
+				points = points + 0;
+				break;
+
+			case'b':
+			case 'B':
+				cout << "You have choosen the okay answer. " << "You're really something." << endl;
+				points = points - 10;
+				break;
+
+			case'c':
+			case 'C':
+				cout << "You are truly evil. " << "Satan loves you." << endl;
+				points = points - 20;
+				break;
+
+			}
+
+			//Question 3
+			cout << "You see an old lady struggling to cross the street.What do you do? " << "\nA.Help her cross the street." << "\nB.Watch her struggle." << "\nC.Push her into the road and run off." << endl;
+			cin >> choiceQ;
+			//Question 3 John Switch Case
+			switch (choiceQ) {
+
+			case'a':
+			case 'A':
+				cout << "You have chosen the good answer. " << "Enjoy Paradise." << endl;
+				points = points + 0;
+				break;
+
+			case'b':
+			case 'B':
+				cout << "You have choosen the okay answer. " << "Interesting Choice." << endl;
+				points = points - 10;
+				break;
+
+			case'c':
+			case 'C':
+				cout << "You are truly evil. " << " >:D <--- That's You Right Now!!" << endl;
+				points = points - 20;
+				break;
+
+			}
+
+			break;
 
 		case 2:
 			//Susan Pathway
@@ -87,6 +165,17 @@ public:
 		case 4:
 			//Invalid Input or Game Over
 		}
+	}
+
+
+	//Method to calculate whether the user is going to heaven or hell
+	void calculatingPoint() {
+
+	}
+
+	//Displaying Details
+	void display() {
+
 	}
 
 };
